@@ -3,9 +3,6 @@ import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
 import ProfileCard from "@/components/ProfileCard";
 import AboutSection from "@/components/AboutSection";
-import ResumeSection from "@/components/ResumeSection";
-import PortfolioSection from "@/components/PortfolioSection";
-import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -15,18 +12,33 @@ const Index = () => {
       case "about":
         return <AboutSection />;
       case "resume":
-        return <ResumeSection />;
+        return (
+          <div className="glass rounded-2xl p-8">
+            <h2 className="text-3xl font-bold gradient-text mb-6">Resume</h2>
+            <p className="text-muted-foreground">Resume section coming soon...</p>
+          </div>
+        );
       case "portfolio":
-        return <PortfolioSection />;
+        return (
+          <div className="glass rounded-2xl p-8">
+            <h2 className="text-3xl font-bold gradient-text mb-6">Portfolio</h2>
+            <p className="text-muted-foreground">Portfolio section coming soon...</p>
+          </div>
+        );
       case "faq":
         return (
-          <div className="glass rounded-2xl p-8 animate-fade-in">
+          <div className="glass rounded-2xl p-8">
             <h2 className="text-3xl font-bold gradient-text mb-6">FAQ</h2>
             <p className="text-muted-foreground">FAQ section coming soon...</p>
           </div>
         );
       case "contact":
-        return <ContactSection />;
+        return (
+          <div className="glass rounded-2xl p-8">
+            <h2 className="text-3xl font-bold gradient-text mb-6">Contact</h2>
+            <p className="text-muted-foreground">Contact section coming soon...</p>
+          </div>
+        );
       default:
         return <AboutSection />;
     }
